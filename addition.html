@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Addition</title>
+    <link href='index.css' type='text/css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class='goback'>
+        <a href='index.html'>>Go Back</a>
+    </div>
+    <div class='subtitle'>
+        <h1 style='text-align: center;'>Addition</h1>
+      </div>
+    <form style='text-align: center;'>
+        <input type='text' name='thevector11' id='vector11' style='width:25px;'><p style='display: inline;'>,</p>
+        <input type='text' name='thevector12' id='vector12' style='width:25px;'><p style='display: inline;'> + </p>
+        <input type='text' name='thevector21' id='vector21' style='width:25px;'><p style='display: inline;'>,</p>
+        <input type='text' name='thevector22' id='vector22' style='width:25px;'><br><br>
+        <input type='button' value='submit' id='submit'
+            onclick="additionVector();">
+            <br><br><br><br>
+    <input type='button' value='Learn more' id='learnMore'
+    onclick='additionAnswer()'>
+    <br><br>
+    </form>
+    <div class='explanationAdd' id='explanationAdd'></div>
+    <div class='additionAnswer' id='addAns'></div>
+
+<script src='start.js'></script>
+  </body>
+</html>
