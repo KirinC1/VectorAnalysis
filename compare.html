@@ -43,8 +43,23 @@
         <input type='number' name='vectorb8' id='vectorB8' style='width:50px;' placeholder='b8'>
         <input type='number' name='vectorb9' id='vectorB9' style='width:50px;' placeholder='b9'>
         <input type='number' name='vectorb10' id='vectorB10' style='width:50px;' placeholder='b10'>
+        <br><br><input type='button' value='COMPARE' id='compareButton' style='width:500px; height: 50px;'
+          onclick='compare();'><br>
+        
+        <div class="difference" id='difference'></div>
+
 
     </form>
+
 <script src='start.js'></script>
+<div class='buttonRefresh' style='text-align: center;'><br><br><br>
+<button onclick='refresh()'>Click to Refresh when changing the vector values and size</button>
+  </div><br><br><br><br>
+  <form style='text-align: center;'>
+  <input type='button' value='Learn more' id='learnMoreCom'
+  onclick='compareAnswer()'><br><br>
+  <div class='explanationAdd' id='explanationCom'></div>
+  <div class='comAns' id='comAns'></div>
+</form>
   </body>
 </html>

@@ -3,8 +3,8 @@ User inputs a two vectors. add those two vectors together. maybe vector subtract
 */
 
 //Vector difference
-
 var x = 'This is the Comparison between multiple vectors.';
+
 
 function dotProduct() {
     //vector dot product
@@ -103,6 +103,34 @@ function dotProduct() {
     }
 }
 
+function dotProductAnswer() {
+    var explanationDot = 'Calculating the dot product can seem tricky, but it is simple. Multiply the first vector\'s x and y value with the second vector\'s corresponding variables. Then, add the two products together and BOOM... you have the dot product.';
+    var img = document.createElement('img');
+    var dotElem = document.getElementById('dotAns');
+    var dotButt = document.getElementById('learnMoreDot')
+    img.src = 'vectorDot.png';
+
+    dotElem.appendChild(img);
+    var explDot = document.getElementById('explanationDot')
+    dotButt.remove();
+    explDot.innerHTML = explanationDot;
+    
+}
+
+function compareAnswer(){
+    var explanationDot = 'Follow these steps: Subtract vector 1 from Vector 2. Square each Component. Add the squared values together. Square root the sum. There is the difference!';
+    var img = document.createElement('img');
+    var comElem = document.getElementById('comAns');
+    var comButt = document.getElementById('learnMoreCom')
+    img.src = 'vectorCompar.png';
+
+    comElem.appendChild(img);
+    var explCom = document.getElementById('explanationCom')
+    comButt.remove();
+    explDot.innerHTML = explanationCom;
+    
+}
+
 function additionAnswer() {
 
     var explanationAdd = 'When adding vectors, the simplest way to do so is to add the x components of both of the vectors together, and then add the y component of both of the vectors together. The sum of each corresponding component becomes the x and y component in the resultant vector.'
@@ -161,56 +189,266 @@ function divisionAnswer() {
 }
 
 function howManySlots() {
-    //slotnumbers
-    var slotA1 = document.getElementById='vectorA1';
-    var slotA2 = document.getElementById='vectorA2';
-    var slotA3 = document.getElementById='vectorA3';
-    var slotA4 = document.getElementById='vectorA4';
-    var slotA5 = document.getElementById='vectorA5';
-    var slotA6 = document.getElementById='vectorA6';
-    var slotA7 = document.getElementById='vectorA7';
-    var slotA8 = document.getElementById='vectorA8';
-    var slotA9 = document.getElementById='vectorA9';
-    var slotA10 = document.getElementById='vectorA10';
-    //slotnumber2
-    var slotB1 = document.getElementById='vectorB1';
-    var slotB2 = document.getElementById='vectorB2';
-    var slotB3 = document.getElementById='vectorB3';
-    var slotB4 = document.getElementById='vectorB4';
-    var slotB5 = document.getElementById='vectorB5';
-    var slotB6 = document.getElementById='vectorB6';
-    var slotB7 = document.getElementById='vectorB7';
-    var slotB8 = document.getElementById='vectorB8';
-    var slotB9 = document.getElementById='vectorB9';
-    var slotB10 = document.getElementById='vectorB10';
 
-    var slotNumber = document.getElementById('howMany');
-    var slotButton = document.getElementById('howManyButton');
+    let slotA1 = document.getElementById('vectorA1');
+    let slotA2 = document.getElementById('vectorA2');
+    let slotA3 = document.getElementById('vectorA3');
+    let slotA4 = document.getElementById('vectorA4');
+    let slotA5 = document.getElementById('vectorA5');
+    let slotA6 = document.getElementById('vectorA6');
+    let slotA7 = document.getElementById('vectorA7');
+    let slotA8 = document.getElementById('vectorA8');
+    let slotA9 = document.getElementById('vectorA9');
+    let slotA10 = document.getElementById('vectorA10');
+    /*slotnumber2*/
+    let slotB1 = document.getElementById('vectorB1');
+    let slotB2 = document.getElementById('vectorB2');
+    let slotB3 = document.getElementById('vectorB3');
+    let slotB4 = document.getElementById('vectorB4');
+    let slotB5 = document.getElementById('vectorB5');
+    let slotB6 = document.getElementById('vectorB6');
+    let slotB7 = document.getElementById('vectorB7');
+    let slotB8 = document.getElementById('vectorB8');
+    let slotB9 = document.getElementById('vectorB9');
+    let slotB10 = document.getElementById('vectorB10');
+    let slotNumber = document.getElementById('howMany').valueAsNumber;
+    let slotButton = document.getElementById('howManyButton');
 
     if(slotNumber > 10) {
-        alert('Currently, vectors with more than 10 slots are not supported. \n\n Thank you for understanding.');
+        alert('Vector Limit = 10...\n\n Or the number you entered is lower than 0...');
     } else if(slotNumber <= 0) {
-        alert('I don\'t see how we could have a vector with less than 0 slots... \n\n try 2 or 4!')
-    }
-
-    if(slotNumber == 1) {
-        slotA2.remove();
-        slotA3.remove();
-        slotA4.remove();
-        slotA5.remove();
-        slotA6.remove();
-        slotA7.remove();
-        slotA8.remove();
-        slotA9.remove();
-        slotA10.remove();
-        slotB2.remove();
-        slotB3.remove();
-        slotB4.remove();
-        slotB5.remove();
-        slotB6.remove();
-        slotB7.remove();
-        slotB8.remove();
-        slotB9.remove();
-        slotB10.remove();
+        alert('Vector Limit = 10...\n\n Or the number you entered is lower than 0...');
+    } else if(slotNumber == 1) {
+        slotA2.style.display = 'none';
+        slotA3.style.display = 'none';
+        slotA4.style.display = 'none';
+        slotA5.style.display = 'none';
+        slotA6.style.display = 'none';
+        slotA7.style.display = 'none';
+        slotA8.style.display = 'none';
+        slotA9.style.display = 'none';
+        slotA10.style.display = 'none';
+        slotB2.style.display = 'none';
+        slotB3.style.display = 'none';
+        slotB4.style.display = 'none';
+        slotB5.style.display = 'none';
+        slotB6.style.display = 'none';
+        slotB7.style.display = 'none';
+        slotB8.style.display = 'none';
+        slotB9.style.display = 'none';
+        slotB10.style.display = 'none';
+    }   else if(slotNumber == 2) {
+        slotA3.style.display = 'none';
+        slotA4.style.display = 'none';
+        slotA5.style.display = 'none';
+        slotA6.style.display = 'none';
+        slotA7.style.display = 'none';
+        slotA8.style.display = 'none';
+        slotA9.style.display = 'none';
+        slotA10.style.display = 'none';
+        slotB3.style.display = 'none';
+        slotB4.style.display = 'none';
+        slotB5.style.display = 'none';
+        slotB6.style.display = 'none';
+        slotB7.style.display = 'none';
+        slotB8.style.display = 'none';
+        slotB9.style.display = 'none';
+        slotB10.style.display = 'none';
+    } else if(slotNumber == 3) {
+        slotA4.style.display = 'none';
+        slotA5.style.display = 'none';
+        slotA6.style.display = 'none';
+        slotA7.style.display = 'none';
+        slotA8.style.display = 'none';
+        slotA9.style.display = 'none';
+        slotA10.style.display = 'none';
+        slotB4.style.display = 'none';
+        slotB5.style.display = 'none';
+        slotB6.style.display = 'none';
+        slotB7.style.display = 'none';
+        slotB8.style.display = 'none';
+        slotB9.style.display = 'none';
+        slotB10.style.display = 'none';
+    } else if(slotNumber == 4) {
+        slotA5.style.display = 'none';
+        slotA6.style.display = 'none';
+        slotA7.style.display = 'none';
+        slotA8.style.display = 'none';
+        slotA9.style.display = 'none';
+        slotA10.style.display = 'none';
+        slotB5.style.display = 'none';
+        slotB6.style.display = 'none';
+        slotB7.style.display = 'none';
+        slotB8.style.display = 'none';
+        slotB9.style.display = 'none';
+        slotB10.style.display = 'none';
+    } else if(slotNumber == 5) {
+        slotA6.style.display = 'none';
+        slotA7.style.display = 'none';
+        slotA8.style.display = 'none';
+        slotA9.style.display = 'none';
+        slotA10.style.display = 'none';
+        slotB6.style.display = 'none';
+        slotB7.style.display = 'none';
+        slotB8.style.display = 'none';
+        slotB9.style.display = 'none';
+        slotB10.style.display = 'none';
+    } else if(slotNumber == 6) {
+        slotA7.style.display = 'none';
+        slotA8.style.display = 'none';
+        slotA9.style.display = 'none';
+        slotA10.style.display = 'none';
+        slotB7.style.display = 'none';
+        slotB8.style.display = 'none';
+        slotB9.style.display = 'none';
+        slotB10.style.display = 'none';
+    } else if(slotNumber == 7) {
+        slotA8.style.display = 'none';
+        slotA9.style.display = 'none';
+        slotA10.style.display = 'none';
+        slotB8.style.display = 'none';
+        slotB9.style.display = 'none';
+        slotB10.style.display = 'none';
+    } else if(slotNumber == 8) {
+        slotA9.style.display = 'none';
+        slotA10.style.display = 'none';
+        slotB9.style.display = 'none';
+        slotB10.style.display = 'none';
+    } else if(slotNumber == 9) {
+        slotA10.style.display = 'none';
+        slotB10.style.display = 'none';
     }
 }
+
+function compare() {
+
+    var diffAns = document.getElementById('difference')
+
+    let slotA1 = document.getElementById('vectorA1').valueAsNumber;
+    let slotA2 = document.getElementById('vectorA2').valueAsNumber;
+    let slotA3 = document.getElementById('vectorA3').valueAsNumber;
+    let slotA4 = document.getElementById('vectorA4').valueAsNumber;
+    let slotA5 = document.getElementById('vectorA5').valueAsNumber;
+    let slotA6 = document.getElementById('vectorA6').valueAsNumber;
+    let slotA7 = document.getElementById('vectorA7').valueAsNumber;
+    let slotA8 = document.getElementById('vectorA8').valueAsNumber;
+    let slotA9 = document.getElementById('vectorA9').valueAsNumber;
+    let slotA10 = document.getElementById('vectorA10').valueAsNumber;
+    /*slotnumber2*/
+    let slotB1 = document.getElementById('vectorB1').valueAsNumber;
+    let slotB2 = document.getElementById('vectorB2').valueAsNumber;
+    let slotB3 = document.getElementById('vectorB3').valueAsNumber;
+    let slotB4 = document.getElementById('vectorB4').valueAsNumber;
+    let slotB5 = document.getElementById('vectorB5').valueAsNumber;
+    let slotB6 = document.getElementById('vectorB6').valueAsNumber;
+    let slotB7 = document.getElementById('vectorB7').valueAsNumber;
+    let slotB8 = document.getElementById('vectorB8').valueAsNumber;
+    let slotB9 = document.getElementById('vectorB9').valueAsNumber;
+    let slotB10 = document.getElementById('vectorB10').valueAsNumber;
+    let slotNumber = document.getElementById('howMany').valueAsNumber;
+    let slotButton = document.getElementById('howManyButton');
+    let compArr = [];
+
+    if(slotNumber == 1) {
+        let oneVector1 = slotB1 - slotA1;
+        let oneVector2 = Math.pow(oneVector1, 2);
+        let oneVectorAns = Math.sqrt(oneVector2);
+        diffAns.replaceWith(oneVectorAns);
+    } else if(slotNumber == 2) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2))
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        let twoVectorResult = compArr[0] + compArr[1];
+        twoVectorResult = Math.sqrt(twoVectorResult);
+        diffAns.replaceWith(twoVectorResult);
+    } else if(slotNumber == 3) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2));
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        compArr.push(Math.pow((slotB3 - slotA3), 2));
+        let threeVectorResult = compArr[0]+ compArr[1] + compArr[2];
+        threeVectorResult = Math.sqrt(threeVectorResult);
+        diffAns.replaceWith(threeVectorResult);
+    } else if(slotNumber == 4) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2));
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        compArr.push(Math.pow((slotB3 - slotA3), 2));
+        compArr.push(Math.pow((slotB4 - slotA4), 2));
+        let fourVectorResult = compArr[0]+ compArr[1] + compArr[2] + compArr[3];
+        fourVectorResult = Math.sqrt(fourVectorResult);
+        diffAns.replaceWith(fourVectorResult);
+    } else if(slotNumber == 5) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2));
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        compArr.push(Math.pow((slotB3 - slotA3), 2));
+        compArr.push(Math.pow((slotB4 - slotA4), 2));
+        compArr.push(Math.pow((slotB5 - slotA5), 2));
+        let fiveVectorResult = compArr[0]+ compArr[1] + compArr[2] + compArr[3] + compArr[4];
+        fiveVectorResult = Math.sqrt(fiveVectorResult);
+        diffAns.replaceWith(fiveVectorResult);
+    } else if(slotNumber == 6) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2));
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        compArr.push(Math.pow((slotB3 - slotA3), 2));
+        compArr.push(Math.pow((slotB4 - slotA4), 2));
+        compArr.push(Math.pow((slotB5 - slotA5), 2));
+        compArr.push(Math.pow((slotB6 - slotA6), 2));
+        let sixVectorResult = compArr[0]+ compArr[1] + compArr[2] + compArr[3] + compArr[4] + compArr[5];
+        sixVectorResults = Math.sqrt(sixVectorResults);
+        diffAns.replaceWith(sixVectorResult);
+    } else if(slotNumber == 7) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2));
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        compArr.push(Math.pow((slotB3 - slotA3), 2));
+        compArr.push(Math.pow((slotB4 - slotA4), 2));
+        compArr.push(Math.pow((slotB5 - slotA5), 2));
+        compArr.push(Math.pow((slotB6 - slotA6), 2));
+        compArr.push(Math.pow((slotB7 - slotA7), 2));
+        let sevenVectorResult = compArr[0]+ compArr[1] + compArr[2] + compArr[3] + compArr[4] + compArr[5] + compArr[6];
+        sevenVectorResult = Math.sqrt(sevenVectorResult);
+        diffAns.replaceWith(sevenVectorResult);
+    } else if(slotNumber == 8) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2));
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        compArr.push(Math.pow((slotB3 - slotA3), 2));
+        compArr.push(Math.pow((slotB4 - slotA4), 2));
+        compArr.push(Math.pow((slotB5 - slotA5), 2));
+        compArr.push(Math.pow((slotB6 - slotA6), 2));
+        compArr.push(Math.pow((slotB7 - slotA7), 2));
+        compArr.push(Math.pow((slotB8 - slotA8), 2));
+        let eightVectorResult = compArr[0]+ compArr[1] + compArr[2] + compArr[3] + compArr[4] + compArr[5] + compArr[6] + compArr[7];
+        eightVectorResult = Math.sqrt(eightVectorResult);
+        diffAns.replaceWith(eightVectorResult);
+    } else if(slotNumber == 9) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2));
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        compArr.push(Math.pow((slotB3 - slotA3), 2));
+        compArr.push(Math.pow((slotB4 - slotA4), 2));
+        compArr.push(Math.pow((slotB5 - slotA5), 2));
+        compArr.push(Math.pow((slotB6 - slotA6), 2));
+        compArr.push(Math.pow((slotB7 - slotA7), 2));
+        compArr.push(Math.pow((slotB8 - slotA8), 2));
+        compArr.push(Math.pow((slotB9), 2));
+        let nineVectorResult = compArr[0]+ compArr[1] + compArr[2] + compArr[3] + compArr[4] + compArr[5] + compArr[6] + compArr[7] + compArr[8];
+        nineVectorResult = Math.sqrt(nineVectorResult); 
+        diffAns.replaceWith(nineVectorResult);
+    } else if(slotNumber == 10) {
+        compArr.push(Math.pow((slotB1 - slotA1), 2));
+        compArr.push(Math.pow((slotB2 - slotA2), 2));
+        compArr.push(Math.pow((slotB3 - slotA3), 2));
+        compArr.push(Math.pow((slotB4 - slotA4), 2));
+        compArr.push(Math.pow((slotB5 - slotA5), 2));
+        compArr.push(Math.pow((slotB6 - slotA6), 2));
+        compArr.push(Math.pow((slotB7 - slotA7), 2));
+        compArr.push(Math.pow((slotB8 - slotA8), 2));
+        compArr.push(Math.pow((slotB9 - slotA9), 2));
+        compArr.push(Math.pow((slotB10 - slotA10), 2));
+        let tenVectorResult = compArr[0]+ compArr[1] + compArr[2] + compArr[3] + compArr[4] + compArr[5] + compArr[6] + compArr[7] + compArr[8] + compArr[9];
+        tenVectorResult = Math.sqrt(tenVectorResult); 
+        diffAns.replaceWith(tenVectorResult);
+    }
+    console.log(compArr);
+}
+
+function refresh(){
+    location.reload();
+}
+
