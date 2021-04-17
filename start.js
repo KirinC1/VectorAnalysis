@@ -118,7 +118,7 @@ function dotProductAnswer() {
 }
 
 function compareAnswer(){
-    var explanationDot = 'Follow these steps: Subtract vector 1 from Vector 2. Square each Component. Add the squared values together. Square root the sum. There is the difference!';
+    var explanationCom = 'Follow these steps: Subtract vector 1 from Vector 2. Square each Component. Add the squared values together. Square root the sum. There is the difference!';
     var img = document.createElement('img');
     var comElem = document.getElementById('comAns');
     var comButt = document.getElementById('learnMoreCom')
@@ -127,7 +127,7 @@ function compareAnswer(){
     comElem.appendChild(img);
     var explCom = document.getElementById('explanationCom')
     comButt.remove();
-    explDot.innerHTML = explanationCom;
+    explCom.innerHTML = explanationCom;
     
 }
 
